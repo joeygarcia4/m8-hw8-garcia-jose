@@ -75,10 +75,6 @@ main a {
   transition: color 0.3s ease-in-out;
 }
 
-main a:hover {
-  color: var(--text-color-lighter);
-}
-
 main a::after {
   content: "";
   position: absolute;
@@ -149,6 +145,13 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+  animation: pulse 2s infinite;
+}
+
+section.hero > button:hover {
+  background-color: var(--warn-color);
+  transform: scale(1.1);
 }
 
 main article {
